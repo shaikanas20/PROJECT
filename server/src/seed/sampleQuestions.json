@@ -1,0 +1,18 @@
+[
+  {
+    "text": "What is 2 + 2?",
+    "topic": "Math",
+    "difficulty": "Easy",
+    "options": ["2", "3", "4", "5"],
+    "answer": "4",
+    "explanation": "2 plus 2 equals 4."
+  },
+  {
+    "text": "Define photosynthesis.",
+    "topic": "Science",
+    "difficulty": "Medium",
+    "options": [],
+    "answer": "Process by which plants make food.",
+    "explanation": "Photosynthesis converts sunlight into chemical energy."
+  }
+]

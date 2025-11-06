@@ -1,0 +1,9 @@
+{
+  "name": "adaptive-learning-platform",
+  "version": "1.0.0",
+  "description": "Adaptive Learning Platform (MERN Stack)",
+  "private": true,
+  "scripts": {
+    "start": "docker compose up --build"
+  }
+}

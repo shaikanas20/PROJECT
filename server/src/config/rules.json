@@ -1,0 +1,24 @@
+{
+  "difficulty_scaling": {
+    "increase_after_correct_streak": 3,
+    "decrease_after_wrong_streak": 2
+  },
+  "topic_progression": {
+    "prerequisites": {
+      "algebra": ["arithmetic"],
+      "geometry": ["algebra"],
+      "calculus": ["geometry"]
+    }
+  },
+  "remediation": {
+    "trigger_after_score_below": 60,
+    "resources": {
+      "algebra": "https://www.khanacademy.org/math/algebra",
+      "geometry": "https://www.khanacademy.org/math/geometry"
+    }
+  },
+  "spaced_repetition": {
+    "cooldown_minutes": 60,
+    "max_repeats_per_day": 2
+  }
+}

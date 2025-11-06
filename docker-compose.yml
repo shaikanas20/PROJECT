@@ -1,0 +1,37 @@
+
+services:
+  mongo:
+    image: mongo:6.0
+    container_name: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  server:
+    build: ./server
+    container_name: adaptive-learning-backend
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/adaptive_learning
+      - JWT_SECRET=your_jwt_secret_here
+      - NODE_ENV=development
+    depends_on:
+      - mongo
+
+  client:
+    build: ./client
+    container_name: adaptive-learning-frontend
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_API_URL=http://localhost:5000
+    depends_on:
+      - server
+
+volumes:
+  mongo_data:
